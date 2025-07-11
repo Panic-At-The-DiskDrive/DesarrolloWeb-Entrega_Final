@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto – Beru Gaming</title>
+  <meta name="description" content="¿Querés contactarnos? Completá el formulario para enviarnos tus dudas, propuestas o comentarios.">
+  <meta name="keywords" content="contacto beru gaming, formulario de contacto, desarrolladores, videojuegos argentinos">
+  <meta name="author" content="Daniel Simonetta">
+  <meta property="og:title" content="Contacto – Beru Gaming">
+  <meta property="og:description" content="Escribinos tus dudas, ideas o comentarios sobre la industria de videojuegos en Argentina.">
+  <meta property="og:image" content="https://panic-at-the-diskdrive.github.io/DesarrolloWeb-Preentrega_III/img/banner.jpg">
+  <meta property="og:url" content="https://panic-at-the-diskdrive.github.io/DesarrolloWeb-Preentrega_III/pages/contacto.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contacto – Beru Gaming">
+  <meta name="twitter:description" content="Completá el formulario y ponete en contacto con nosotros.">
+  <meta name="twitter:image" content="https://panic-at-the-diskdrive.github.io/DesarrolloWeb-Preentrega_III/img/banner.jpg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-dark text-light">
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Beru Gaming</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="juegos.html">Juegos</a></li>
+            <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contacto.html" aria-current="page">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container flex-grow-1 py-5">
+    <h1 class="mb-4">Contacto</h1>
+    <p>¿Tenés dudas, ideas o propuestas? Escribinos a través del siguiente formulario.</p>
+    <form class="bg-secondary p-4 rounded needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" required>
+        <div class="invalid-feedback">Por favor ingresá tu nombre.</div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+        <div class="invalid-feedback">Por favor ingresá un email válido.</div>
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" class="form-control" required></textarea>
+        <div class="invalid-feedback">Por favor escribí tu mensaje.</div>
+      </div>
+      <button type="submit" class="btn btn-light fw-bold">Enviar</button>
+    </form>
+  </main>
+
+  <footer class="bg-primary text-center py-3 mt-auto">
+    <p class="mb-0 text-light">&copy; 2025 - Daniel Simonetta - Comisión 87930.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (() => {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  </script>
+</body>
+</html>
